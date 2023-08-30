@@ -27,7 +27,7 @@ function displayCart(){
 
 
 async function fetchProducts(){
-    const res = await fetch("http://fakestoreapi.com/products")
+    const res = await fetch("https://fakestoreapi.com/products")
     const products = await res.json()
     displayProducts(products)
 
