@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/logo.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg py-3">
+        <div class="container">
+          <a class="navbar-brand" href="#">Shopping Cart</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleMenu()">
+            <i class="fa fa-bars" id="menu-icon"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <button class="btn btn-dark fs-5" onclick="displayHome()">Home</button>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-dark fs-5" onclick="displayCart()">Cart</button>
+              </li>
+             
+              
+            </ul>
+            <button type="button" class="btn btn-light position-relative mx-2" onclick="displayCart()">
+                <i class="fa-solid fa-shopping-cart"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary" id="cart-length">
+                  0
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </button>
+          </div>
+        </div>
+      </nav>
+
+  <section class="container-fluid my-5" id="home-section">
+    <h2 class="text-center">Products</h2>
+    <div class=" mt-5 d-flex align-items-center justify-content-center gap-5 flex-wrap" id="products-container">
+        
+        
+    </div>
+  </section>
+  <section class="container-fluid my-5" id="cart-section">
+    
+    <div class="row px-2" id="cart-row">
+        <div class="col-lg-8 px-4" id="cart-container">
+           
+        </div>
+        <div class="col-lg-4 p-2 border  d-flex flex-column align-items-center justify-content-center">
+            <h5 class="text-center">Cart Summary</h5>
+            <div class="d-flex align-items-center justify-content-between fs-5 w-100">
+                <p>Total Items</p>
+                <p id="total-items"></p>
+            </div>
+            <div class="d-flex align-items-center justify-content-between fs-5 w-100">
+                <p>Total Price</p>
+                <p id="total-price"></p>
+            </div>
+            <button class="btn btn-success">Order Now</button>
+        </div>
+    </div>
+  </section>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
